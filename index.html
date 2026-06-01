@@ -5,69 +5,34 @@ title: Home
 
 <div class="site-wrapper">
 
-  <!-- Hero -->
   <section class="hero">
-    <div class="hero-label">// Neural Notes</div>
-    <h1>Deep Learning,<br><em>from scratch.</em></h1>
-    <p class="hero-sub">
-      Exploring the mathematics, intuition, and code behind neural networks — 
-      written for curious minds at every level.
-    </p>
+    <h1>Neural Notes</h1>
+    <p class="hero-sub">Deep learning fundamentals — explained clearly, built carefully. Neural networks, math, and code from the ground up.</p>
   </section>
 
   <div class="main-layout">
-
-    <!-- ===== POST LIST ===== -->
     <main>
       <div class="section-header">
         <h2>Latest Posts</h2>
-        <span class="count">{{ site.posts | size }} total</span>
+        <span class="count">{{ site.posts | size }} posts</span>
       </div>
 
       <div class="post-list">
         {% for post in site.posts %}
         <a class="post-card" href="{{ post.url | relative_url }}">
-
-          <div class="post-date-block">
-            <div class="post-date-day">{{ post.date | date: "%d" }}</div>
-            <div class="post-date-mon">{{ post.date | date: "%b" }}</div>
-            <div class="post-date-yr">{{ post.date | date: "%Y" }}</div>
+          <div class="post-meta-row">
+            {% if post.category %}<span class="post-category">{{ post.category }}</span><span class="meta-sep">·</span>{% endif %}
+            <span class="post-date-text">{{ post.date | date: "%b %d, %Y" }}</span>
+            {% if post.read_time %}<span class="meta-sep">·</span><span class="post-read-time">{{ post.read_time }} min read</span>{% endif %}
           </div>
-
-          <div class="post-body">
-            <div class="post-meta-row">
-              {% if post.category %}
-              <span class="post-category">{{ post.category }}</span>
-              <span style="color: var(--border);">·</span>
-              {% endif %}
-              {% if post.read_time %}
-              <span class="post-read-time">{{ post.read_time }} min read</span>
-              {% endif %}
-            </div>
-
-            <div class="post-title">{{ post.title }}</div>
-
-            {% if post.excerpt %}
-            <div class="post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</div>
-            {% endif %}
-
-            {% if post.tags %}
-            <div class="post-tags-row">
-              {% for tag in post.tags limit: 4 %}
-              <span class="tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
-            {% endif %}
-          </div>
-
+          <div class="post-title">{{ post.title }}</div>
+          {% if post.excerpt %}<div class="post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</div>{% endif %}
+          {% if post.tags %}<div class="post-tags-row">{% for tag in post.tags limit: 4 %}<span class="tag">{{ tag }}</span>{% endfor %}</div>{% endif %}
         </a>
         {% endfor %}
       </div>
-
     </main>
 
-    <!-- ===== SIDEBAR ===== -->
     {% include sidebar.html %}
-
   </div>
 </div>
