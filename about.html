@@ -1,0 +1,81 @@
+---
+layout: default
+title: About
+permalink: /about/
+---
+
+<div class="site-wrapper">
+  <div class="main-layout">
+
+    <main class="post-page">
+      <header class="post-header">
+        <span class="post-category">About this blog</span>
+        <h1>Neural Notes</h1>
+        <div class="post-byline">
+          <span>A deep learning blog</span>
+          <span class="byline-dot">·</span>
+          <span>Built with Jekyll &amp; GitHub Pages</span>
+        </div>
+      </header>
+
+      <div class="article-content">
+        <p>
+          Welcome to <strong>Neural Notes</strong> — a blog about understanding deep learning 
+          from the ground up. The goal here is to write clear, mathematically honest explanations 
+          of the concepts that power modern AI.
+        </p>
+
+        <h2>What you'll find here</h2>
+        <p>
+          Posts cover the fundamentals — backpropagation, gradient descent, convolutional networks, 
+          attention mechanisms — as well as implementation in Python and PyTorch. Every post tries 
+          to build intuition <em>before</em> diving into formulas.
+        </p>
+
+        <h2>About the author</h2>
+        <p>
+          <!-- Edit this section with your info -->
+          Hi, I'm <strong>{{ site.author.name }}</strong>. {{ site.author.bio }}
+        </p>
+        <p>
+          You can find me on 
+          <a href="https://github.com/{{ site.author.github }}" target="_blank">GitHub</a>
+          {% if site.author.twitter %}
+          and <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank">Twitter</a>
+          {% endif %}.
+        </p>
+
+        <h2>How this site is built</h2>
+        <p>
+          This blog is built with <a href="https://jekyllrb.com" target="_blank">Jekyll</a> and 
+          hosted for free on <a href="https://pages.github.com" target="_blank">GitHub Pages</a>. 
+          Math is rendered using <a href="https://katex.org" target="_blank">KaTeX</a>. 
+          Source code is available on GitHub.
+        </p>
+
+        <h2>Topics covered</h2>
+        <ul>
+          <li>Neural network fundamentals (perceptrons, activations, layers)</li>
+          <li>Backpropagation and automatic differentiation</li>
+          <li>Optimization: SGD, Adam, learning rate schedules</li>
+          <li>Convolutional Neural Networks (CNNs)</li>
+          <li>Recurrent networks and LSTMs</li>
+          <li>Transformers and attention mechanisms</li>
+          <li>Regularization: dropout, batch norm, weight decay</li>
+          <li>Practical PyTorch implementations</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>
+          Have a question, correction, or suggestion? Feel free to 
+          <a href="https://github.com/{{ site.author.github }}" target="_blank">open an issue on GitHub</a>
+          or reach out via 
+          <a href="mailto:{{ site.author.email }}">email</a>.
+        </p>
+      </div>
+    </main>
+
+    {% include sidebar.html %}
+
+  </div>
+</div>

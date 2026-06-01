@@ -1,0 +1,54 @@
+title: "Neural Notes"
+tagline: "Deep Learning, From the Ground Up"
+description: "A blog exploring the fundamentals of deep learning — written clearly, built carefully."
+author:
+  name: "Your Name"
+  email: "your@email.com"
+  github: "yourusername"
+  twitter: "yourhandle"
+  bio: "Deep learning enthusiast. Writing about neural networks, optimization, and everything in between."
+
+url: "https://yourusername.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Pagination
+paginate: 5
+paginate_path: "/page/:num/"
+
+# Permalink structure
+permalink: /blog/:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
