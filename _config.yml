@@ -52,3 +52,6 @@ exclude:
   - Gemfile.lock
   - README.md
   - node_modules
+
+kramdown:
+  math_engine: katex
