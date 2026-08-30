@@ -2,13 +2,12 @@ title: "Neural Notes"
 tagline: "Deep Learning, From the Ground Up"
 description: "A blog exploring the fundamentals of deep learning — written clearly, built carefully."
 author:
-  name: "Your Name"
-  email: "your@email.com"
-  github: "yourusername"
-  twitter: "yourhandle"
+  name: "Utsav Sharma"
+  email: "utsav.dhariwal@gmail.com"
+  github: "Utsav-2301"
   bio: "Deep learning enthusiast. Writing about neural networks, optimization, and everything in between."
 
-url: "https://yourusername.github.io"
+url: "https://Utsav-2301.github.io"
 baseurl: ""
 
 # Build settings
